@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Elegan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Bagian Hero -->
+    <header class="hero animasi-scroll">
+        <div class="container text-center">
+            <!-- Foto Profil -->
+            <img src="c:\Users\ASUS\Downloads\luna cantik.jpeg" alt="Foto Profil" class="profile-img">
+            
+            <h1>Halo, Saya <span class="highlight">Adeluna Gayatri Rahmadyni</span></h1>
+            <p class="subtitle">Web Developer & UI/UX Enthusiast</p>
+            <a href="berkas/cv_anda.pdf" download="CV_Nama_Anda.pdf" class="btn-download">
+                Download CV (PDF)
+            </a>
+        </div>
+    </header>
+
+    <!-- Bagian Tentang Saya -->
+    <section class="about container text-center animasi-scroll">
+        <h2>Tentang Saya</h2>
+        <div class="divider"></div>
+        <p>Saya adalah seorang pengembang web yang berfokus pada pembuatan antarmuka yang bersih, fungsional, dan estetis. Dengan perpaduan kreativitas dan logika kode, saya mewujudkan ide-ide menjadi produk digital yang premium.</p>
+    </section>
+
+    <!-- Bagian Keahlian (Skills) -->
+    <section class="skills container text-center animasi-scroll">
+        <h2>Keahlian</h2>
+        <div class="divider"></div>
+        <div class="skills-grid">
+            <span class="skill-tag">HTML5 & CSS</span>
+            <span class="skill-tag">PHP & MySQL</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Figma</span>
+        </div>
+    </section>
+
+    <!-- Bagian Proyek -->
+    <section class="portfolio container animasi-scroll">
+        <h2 class="text-center">Pengalaman Proyek</h2>
+        <div class="divider"></div>
+        <div class="grid">
+            <!-- Proyek 1 -->
+            <div class="card">
+                <div class="img-wrapper">
+                    <img src="c:\Users\ASUS\Downloads\project2.jpeg" alt="Portal SPMB" class="project-img">
+                </div>
+                <div class="card-content">
+                    <h3>Sistem Portal SPMB</h3>
+                    <p>Platform pendaftaran siswa baru berbasis PHP yang dirancang dengan antarmuka elegan, dilengkapi fitur manajemen data yang efisien.</p>
+                </div>
+            </div>
+            <!-- Proyek 2 -->
+            <div class="card">
+                <div class="img-wrapper">
+                    <img src="c:\Users\ASUS\Downloads\projec1.jpeg" alt="Act4Earth" class="project-img">
+                </div>
+                <div class="card-content">
+                    <h3>Act4Earth</h3>
+                    <p>Act4Earth Adalah website peduli lingkungan untuk anak-anak belajar peduli dengan lingkungan sekitar sejak dini, web ini berisi perintah & game.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Prestasi -->
+    <section class="achievements container text-center animasi-scroll">
+        <h2>Prestasi</h2>
+        <div class="divider"></div>
+        <div class="grid">
+            <div class="card achievement-card">
+                <div class="icon">🏆</div>
+                <h3>Juara berkelompok</h3>
+                <p>Meraih penghargaan utama dalam kompetisi kepramukaan.</p>
+            </div>
+            <div class="card achievement-card">
+                <div class="icon">🎓</div>
+                <h3>Sertifikasi </h3>
+                <p>Telah tersertifikasi sebagai pramuka penegak garuda dan organisasi siswa intra sekolah.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Kontak & Lokasi (Baru) -->
+    <section class="contact container animasi-scroll">
+        <h2 class="text-center">Kontak & Lokasi</h2>
+        <div class="divider"></div>
+        <div class="grid contact-grid">
+            <!-- Kartu Info Kontak -->
+            <div class="card contact-card">
+                <h3>Hubungi Saya</h3>
+                <p>Mari terhubung atau berdiskusi seputar proyek kolaborasi. Anda dapat menghubungi saya melalui:</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="icon-small">📧</span>
+                        <p>llunaade@email.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon-small">📱</span>
+                        <p>+62 823 3388 0603</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="icon-small">💼</span>
+                        <p>@na_dermdy</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Kartu Peta Lokasi -->
+            <div class="card location-card">
+                <h3>Lokasi Saya</h3>
+                <p>Indonesia, jawa timur, jember</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!4v1784780973807!6m8!1m7!1sbT9ahUvlJ647ufAbUyhnQA!2m2!1d-8.334740479248577!2d113.692692106172!3f237.42!4f-20.39!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="animasi-scroll">
+        <p>&copy; 2026 Adeluna Gayatri Rahmadyni. Dirancang dengan presisi & keindahan.</p>
+    </footer>
+
+    <!-- Script untuk mendeteksi scroll dan memunculkan animasi -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('muncul');
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            const hiddenElements = document.querySelectorAll('.animasi-scroll');
+            hiddenElements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
